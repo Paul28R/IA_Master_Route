@@ -12,3 +12,7 @@ Diccionarios
 las macros.python.json
 glob.glob
 pathlib
+open() functions
+os.access()
+Snippet
+modo (re) de python
