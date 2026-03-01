@@ -52,8 +52,42 @@ texto_largo = "Podrías intentar usar .replace(), " \
 
 print(contar_letras(texto_largo))
 
-# def El_contador_de_text(**kmargs):
+##############################################
 
+import string
+# 1. Obtener el texto del diccionario kwargs
+def El_contador_de_text(**kmargs):
+    # usamos .get() para evitar errores si no pasan la llave "texto"
+    texto = kmargs.get("texto", "")
+    if not texto:
+        return "no hay texto para procesar"
+# 2. Limpieza minusculas y quitar puntuacion
+    texto_limpio = texto.lower().translate(str.maketrans('','', string.punctuation))
+# 3. separar palabras 
+    palabras = texto.split()
+# 4. conteo de frecuencias
+    frecuencias = {}
+    for p in palabras:
+        frecuencias[p] = frecuencias.get(p, 0) + 1
+    return frecuencias
+
+# ---Ahora lo ponemos a funcionar--- #
+
+resultado = El_contador_de_text(texto="todo lo que agregues aqui aqui tiene que que que contarse")
+print(resultado)
+
+
+### Funsion mas corta con (Counter) de la libreria estardar de python:
+from collections import Counter
+
+def Contado_corto(**kwargs):
+    texto = kwargs.get("texto","").lower().translate(str.maketrans('','', string.punctuation))
+# Esto hace todo el trabajo de contar por ti
+    return dict(Counter(texto.split()))
+
+resultado = Contado_corto(texto="Espero este (si) sí que funsione bien bien")
+print(resultado)
+    
 
 
 
