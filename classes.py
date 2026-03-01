@@ -1,3 +1,5 @@
+# no necesito esto
+
 class person:
     def __init__(self, name, surname):
         self.name = name
