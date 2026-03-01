@@ -27,9 +27,8 @@ print(operacion(2, 7, "div"))
 ####################################
 
 
+# def El_contador_de_text(**kmargs):
 
-def El_contador_de_text(**kmargs):
-    
 
  
 
