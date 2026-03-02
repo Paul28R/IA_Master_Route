@@ -44,7 +44,15 @@ def mult_named_items(**kwargs):
 
 mult_named_items(fitst="Dave", last="Sara")
 
-############# Funciones Lambda (Anonimas) 
+# Arguments 
+def super_funcion(*args, **kwargs):
+    suma = sum(args)
+    usuario = kwargs.get("nombre", "Anonimo")
+    return f"{usuario}, la suma es {suma}"
+print(super_funcion(10, 20, 30, nombre="jose"))
+
+
+
 
 
 

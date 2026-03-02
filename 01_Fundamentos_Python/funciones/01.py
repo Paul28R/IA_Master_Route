@@ -36,20 +36,6 @@ def mostrar_linea(num):
 numero = 2
 mostrar_linea(7)
 
-###################
-
-# Argumentos
-
-def super_funcion(*args, **kwargs):
-    suma = sum(args)
-    usuario = kwargs.get("nombre", "Anonimo")
-    return f"{usuario}, la suma es {suma}"
-print(super_funcion(10, 20, 30, nombre="jose"))
-
-# Funsiones Lambda (Anónimas)
-
-al_cuadrado = lambda x: x**2
-print(al_cuadrado(5))
 
 
 

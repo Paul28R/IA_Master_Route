@@ -91,11 +91,33 @@ print(resultado)
 ####################################
 
 # lambda
-numero = [1, 5, 8,12, 15, 21]
-
-multiplos_de_3 = list(filter(lambda n: n % 3 == 0 , numero))
-print(multiplos_de_3)
+numeros = [1, 5, 8, 12, 15, 20, 21]
+division = list(filter(lambda x: x % 3 == 0, numeros))
+print(division)
      
+## Devision segura
+
+def dev_segura(num1, num2):
+    try:
+        return num1 / num2 
+    except ZeroDivisionError:
+        return "no se puede dividir por 0"
+    
+print(dev_segura(10, 2))
+print(dev_segura(10, 0))
+
+def dividir(a, b):
+    if b == 0:
+        return "No se puede diviir por cero"
+    return a / b
+
+print(dividir(10, 2))
+print(dividir(10, 0))
+
+## Filtrado y tipado
+
+
+
 
 
 
