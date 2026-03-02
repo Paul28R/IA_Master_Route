@@ -64,7 +64,7 @@ def El_contador_de_text(**kmargs):
 # 2. Limpieza minusculas y quitar puntuacion
     texto_limpio = texto.lower().translate(str.maketrans('','', string.punctuation))
 # 3. separar palabras 
-    palabras = texto.split()
+    palabras = texto_limpio.split()
 # 4. conteo de frecuencias
     frecuencias = {}
     for p in palabras:
@@ -73,7 +73,7 @@ def El_contador_de_text(**kmargs):
 
 # ---Ahora lo ponemos a funcionar--- #
 
-resultado = El_contador_de_text(texto="todo lo que agregues aqui aqui tiene que que que contarse")
+resultado = El_contador_de_text(texto="todo lo que agregues aqui aqui tiene que que que contarse (pull)")
 print(resultado)
 
 
@@ -87,7 +87,15 @@ def Contado_corto(**kwargs):
 
 resultado = Contado_corto(texto="Espero este (si) sí que funsione bien bien")
 print(resultado)
-    
+
+####################################
+
+# lambda
+numero = [1, 5, 8,12, 15, 21]
+
+multiplos_de_3 = list(filter(lambda n: n % 3 == 0 , numero))
+print(multiplos_de_3)
+     
 
 
 
