@@ -114,7 +114,17 @@ def dividir(a, b):
 print(dividir(10, 2))
 print(dividir(10, 0))
 
-## Filtrado y tipado
+
+# otra practica
+def limpia_lista_python(datos: list) -> list:
+    
+    def es_convertible(x):
+        try:
+            float(x)
+            return True
+        except:
+            return None
+
 
 
 
