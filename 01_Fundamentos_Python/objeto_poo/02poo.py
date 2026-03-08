@@ -65,3 +65,34 @@ print(mi_cuenta.ver_saldo())
 # Clase Hija 2: Gerente que añade un bono. Su método calcular_sueldo debe sumar base + bono.
 # Práctica: Crea una lista con un vendedor y un gerente, y recorre la lista llamando al método calcular_sueldo de cada uno (Polimorfismo).
 
+class Empleado:
+    def __init__(self, nombre, sueldo_base):
+        self.nombre = nombre
+        self.sueldo_base = sueldo_base
+
+    def calcular_sueldo(self):
+        return self.sueldo_base
+    
+class Vendedor(Empleado):
+    def __init__(self, nombre, sueldo_base, comision):
+        super().__init__(nombre, sueldo_base)
+        self.comision  = comision
+
+    def calcular_sueldo(self):
+        return self.sueldo_base + self.comision
+    
+class Gerente(Empleado):
+    def __init__(self, nombre, sueldo_base, bono):
+        super().__init__(nombre, sueldo_base)
+        self.bono = bono
+    
+    def calcular_sueldo(self):
+        return self.sueldo_base + self.bono
+    
+
+vendedor1 = Vendedor("Robert", 2000, 500)
+vendedor2 = Gerente("Salomon", 5000, 2000)
+    
+empleados = [vendedor1, vendedor2]
+for emp in empleados:
+    print(f"Empleado: {emp.nombre} | sueldo total: {emp.calcular_sueldo()}")
