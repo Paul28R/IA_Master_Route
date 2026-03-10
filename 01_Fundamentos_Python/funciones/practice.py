@@ -125,6 +125,53 @@ def limpia_lista_python(datos: list) -> list:
         except:
             return None
 
+celsius = 25 
+fahrenheit = (celsius * 9/5) + 32
+
+print(f"{celsius} C equivalen a {int(fahrenheit)} F")
+
+
+# celsius = float(input("Ingresa los grados celsius:"))
+# fahrenheit = (celsius * 9/5) + 32
+
+print(f"{celsius} a {fahrenheit}")
+
+#########################
+
+def convertir_a_fahrenheit(c):
+    return (c * 9/5) + 32
+
+print(convertir_a_fahrenheit(200))
+
+######################
+
+def es_par(num1):
+    if num1 % 2 == 0:
+        return True
+    else:
+        return False
+    
+
+print(es_par(3))
+
+#####################
+
+def mayor_sin_max(num1, num2, num3):
+    if num1 >= num2 and num1 >= num3:
+        return num1
+    elif num2 >= num1 and num2 >= num3:
+        return num2
+    else:
+        return num3
+    
+print(mayor_sin_max(10,5,8))
+print(mayor_sin_max(15,25, 20))
+print(mayor_sin_max(3, 3, 1))
+
+
+
+
+
 
 
 

@@ -16,3 +16,10 @@ open() functions
 os.access()
 Snippet
 modo (re) de python
+
+
+### Recuerdos
+
+git stash
+git pull origin main
+git stash pop
